@@ -22,8 +22,8 @@
 
 | 项目 | 值 |
 |------|-----|
-| 飞牛 NAS IP | 192.168.1.100 (示例) |
-| SSH 用户 | vinwjin |
+| 飞牛 NAS IP | 你的NAS-IP (示例) |
+| SSH 用户 | 你的用户名 |
 | OpenClaw 版本 | 2026.3.8 |
 | Node.js 版本 | v22.22.1 |
 | 部署方式 | npm 系统级安装 |
@@ -38,7 +38,7 @@
 
 SSH 登录飞牛 NAS：
 ```bash
-ssh vinwjin@192.168.1.100
+ssh 你的用户名@你的NAS-IP
 ```
 
 检查系统信息：
@@ -81,7 +81,7 @@ openclaw --version
 # 期望显示版本号
 
 whoami
-# 期望: vinwjin (普通用户，非 root)
+# 期望: 你的用户名 (普通用户，非 root)
 ```
 
 ### 四、配置 OpenClaw
@@ -134,7 +134,7 @@ mkdir -p ~/.openclaw
       "model": {
         "primary": "minimax-cn/MiniMax-M2.5"
       },
-      "workspace": "/home/vinwjin/openclaw_workspace"
+      "workspace": "/home/你的用户名/openclaw_workspace"
     }
   },
   "channels": {
@@ -182,7 +182,7 @@ source ~/.bashrc
 openclaw gateway run --bind lan --port 18789
 ```
 
-**访问地址：** http://192.168.1.100:18789
+**访问地址：** http://你的NAS-IP:18789
 
 ### 六、飞书配对
 
@@ -252,7 +252,7 @@ clawhub install <技能slug>
 
 ```bash
 # 从本地上传技能
-scp -r ~/skills/<技能名> vinwjin@192.168.1.100:~/.openclaw/skills/
+scp -r ~/skills/<技能名> 你的用户名@你的NAS-IP:~/.openclaw/skills/
 ```
 
 ---
@@ -267,7 +267,7 @@ scp -r ~/skills/<技能名> vinwjin@192.168.1.100:~/.openclaw/skills/
 {
   "fileSystem": {
     "allowlist": [
-      "/home/vinwjin/openclaw_workspace"
+      "/home/你的用户名/openclaw_workspace"
     ]
   },
   "shell": {
@@ -343,7 +343,7 @@ openclaw gateway run --port 18790
 | 技能数量 | 24+ |
 | 渠道 | 飞书 |
 | 模型 | MiniMax 2.5 |
-| 访问地址 | http://192.168.1.100:18789 |
+| 访问地址 | http://你的NAS-IP:18789 |
 | 开机自启 | ✅ |
 
 ---
