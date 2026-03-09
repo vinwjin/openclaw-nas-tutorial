@@ -4,6 +4,8 @@
 > 日期: 2026-03-10  
 > 环境: 飞牛 NAS (fnOS) + OpenClaw + 飞书
 
+> **参考原文**: [飞牛NAS部署OpenClaw：即时通讯Bot集成与安全加固完整实录](https://club.fnnas.com/forum.php?mod=viewthread&tid=55197) - 来自飞牛私有云论坛
+
 ---
 
 ## 📋 概述
